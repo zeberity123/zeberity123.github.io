@@ -11,11 +11,11 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      city.innerText = "Your City: " + data.name;
-      weather.innerText = `Weather: ${data.weather[0].main} \n Temperature: ${data.main.temp}'C`;
+      city.innerText = "사는곳: " + data.name;
+      weather.innerText = `현재날씨: ${data.weather[0].main} \n 현재온도: ${data.main.temp}'C`;
     });
 }
 function onGeoError() {
-  alert("Can't find you. No weather for you.");
+  alert("위치를 못찾겠어요 ㅠㅠ");
 }
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

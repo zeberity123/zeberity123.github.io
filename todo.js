@@ -21,14 +21,17 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  const btImage = document.createElement("img");
+  button.innerText = "x";
+  /*const btImage = document.createElement("img");
   btImage.src = `x4.jpg`;
   btImage.width = 18;
   btImage.height = 18;
+  button.img = btImage;*/
   button.addEventListener("click", deleteToDo);
-  button.appendChild(btImage);
+  
   li.appendChild(span);
   li.appendChild(button);
+  //button.appendChild(btImage);
   toDoList.appendChild(li);
 }
 function handleToDoSubmit(event) {
