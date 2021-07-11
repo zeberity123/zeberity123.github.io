@@ -21,8 +21,12 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  const btImage = document.createElement("img");
+  btImage.src = `x4.jpg`;
+  btImage.width = 18;
+  btImage.height = 18;
   button.addEventListener("click", deleteToDo);
+  button.appendChild(btImage);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
