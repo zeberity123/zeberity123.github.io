@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Chrome site</title>
+  </head>
+  <body>
+    <p><h1 id="clock">00:00:00</h1></p>
+    <h1 class="hidden" id="greeting"></h1>
+    <p>
+    <form class="hidden" id="login-form">
+      <input class="box"
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <input class="box1" type="submit" value="Log In" />
+    </p>
+    </form>
+    
+    <form id="todo-form">
+      <input class="box" type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span> <br><br>
+      <span></span>
+    </div>
+    <script src="greetings.js"></script>
+    <script src="clock.js"></script>
+    <script src="chrome/quotes.js"></script>
+    <script src="background.js"></script>
+    <script src="todo.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
